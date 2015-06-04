@@ -1,0 +1,139 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+/*mmi*/
+/*headline color: #990000 */
+/*box background color: #fffdf5 */
+/*tab background color: #ffc033 */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
+#content {
+    width: 960px;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#breadcrumbs {
+    background-color: #eeeeee;
+}
+
+#booking-info {
+    float: right;
+}
+
+#vegas-tabs-box {
+    padding-top: 100px;
+}
+
+#vegas-tabs-box .tab-content {
+  width: 675px;
+  color: black;
+  background-color: #fffdf5;
+  padding: 5px 15px;
+  border: 1px solid #ffc033;
+  border-top: none;
+}
+
+.vegas-tabs-list {
+    width: 675px;
+    padding: 3px 0;
+    margin: 0;
+    border-bottom: 1px solid #ffc033;
+    font: bold 12px Verdana, sans-serif;
+}
+
+.vegas-tabs-list li {
+    list-style: none;
+    margin: 0;
+    display: inline;
+}
+
+.vegas-tabs-list li a {
+    padding: 3px 0.5em;
+    border: 1px solid #ffc033;
+    border-bottom: none;
+    background: #ffc033;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0 ;
+}
+
+.vegas-tabs-list li a:link {
+    color: black;
+}
+
+.vegas-tabs-list li a:visited {
+    color: #667;
+}
+
+.vegas-tabs-list li.active a,
+.vegas-tabs-list li a:hover {
+    background: white;
+    border-bottom: 1px solid white;
+}
+
+/*mmi*/
+
+/* Space out content a bit */
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+}
