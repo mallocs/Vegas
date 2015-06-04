@@ -20,10 +20,27 @@ $icon-font-path: '../fonts/';
 body {
   margin: 0;
   background-color: #000;
+  font-size: 14px;
+  line-height: initial;
 }
 
 a {
     cursor: pointer; /*what's overriding this?*/
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 0 0 5px 0;   
+    padding: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
 }
 
 #content {
@@ -47,14 +64,13 @@ a {
     overflow: hidden;
 }
 
-#content-fine-print p {
-    font-size: 8px;
-    margin: 0 5px 15px 5px;
-    clear: both;
+.fine-print {
+    font-size: 10px;
 }
 
-#content-offer {
-    height: 115px;
+#content-fine-print {
+    clear: both;
+    margin: 0 5px 15px 5px;
 }
 
 #content-available-hotels {
@@ -72,6 +88,7 @@ a {
     float: right;
     width: 660px;
     margin-right: 15px;
+    margin-top: 10px;
 }
 
 #content-hotel-image {
@@ -93,7 +110,42 @@ a {
     margin-top: 10px;
 }
 
-.showhide {
+#content-offer-left {
+    margin-bottom: 20px;
+}
+
+#content-offer {
+}
+
+#content-offer-right {
+    float: right;
+}
+
+#offer-details {
+    width: 275px;
+    float: right;
+}
+
+#offer-details-flighthotel {
+    float: left;
+    width: 50%;
+    padding-right: 7px;
+}
+
+#offer-details-hotelonly {
+    float: left;
+    width: 50%;
+    border-left: 1px solid gray;
+    overflow: hidden;
+    padding-left: 7px;
+}
+
+#offer-details-hotelonly p,
+#offer-details-flighthotel p {
+    margin-bottom: 3px;
+}
+
+.showmore {
     float: left;
     clear: both;
 }
@@ -148,7 +200,7 @@ a {
     border-radius: 4px 4px 0 0;
 }
 
-.vegas-tabs-list li a:link {
+.vegas-tabs-list li a {
     color: #000;
 }
 

@@ -22,12 +22,13 @@
 
       
 <div id="content">
+    
     <div id="breadcrumbs">Vegas &gt; Hotels &gt; Venetian</div>
     <div id="booking-info">Book Online or <span class="vegas-red">Call 1-866-9 Vegas 9 (983-4279)</span></div>
 
     <div id="content-left-column">
         <div><img id="content-hotel-image" src="images/venetian.jpg"></div>
-        <div id="content-hotel-location">Location: Strip (<a href="">map</a>)</div>
+        <div id="content-hotel-location">Location: Strip (<a href="javascript:void(0)" class="link-to-map">map</a>)</div>
         <div id="content-hotel-recommend"><img src="images/like.jpg"> 89% Recommend This Hotel</div>
         <div id="content-available-hotels">
             <table id="available-hotels-table">
@@ -62,7 +63,23 @@
     </div>
     
     <div id="content-right-column">
-        <div id="content-offer">
+        
+        <div id="content-offer-right">
+            <div id="offer-details">
+                <div id="offer-details-flighthotel"><p>Flight + Hotel from*</p>
+                    <h2>$233.81</h2>
+                    <p class="fine-print">Per person for 2-night stay.<br>
+                    Includes Flight + Hotel,<br>
+                    Taxes and Fees.</p>
+                </div>
+                <div id="offer-details-hotelonly"><p>Hotel rooms from*</p>
+                    <h2>$149.00</h2>
+                    <p class="fine-print">Average rate per night</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="content-offer-left">
             <h2>Venetian</h2>
             <div id="hotel-stars">
                 <img src="images/star.jpg">
@@ -73,21 +90,23 @@
             </div>
             <div id="rate-guarantee"><img src="images/best-rate.jpg"><a href="#">Best Rate Guarantee</a></div>
         </div>
+        
+
         <div id="vegas-tabs-box">
             <ul class="vegas-tabs-list">
                 <li class="active">
-                    <a href="#1a" data-toggle="tab">Details</a>
+                    <a href="#details-pane" data-toggle="tab">Details</a>
                 </li>
                 <li>
-                    <a href="#2a" data-toggle="tab">Description</a>
+                    <a href="#description-pane" data-toggle="tab">Description</a>
                 </li>
                 <li>
-                    <a href="#3a" data-toggle="tab">Map</a>
+                    <a href="#map-pane" data-toggle="tab">Map</a>
                 </li>
             </ul>
 
             <div class="tab-content clearfix">
-                <div class="tab-pane active" id="1a">
+                <div class="tab-pane active" id="details-pane">
                     <h2 class="vegas-red">Venetian Details</h2>
                     <div class="hotel-details-left">
                         <b>Number of Rooms</b>
@@ -116,20 +135,22 @@
                         <b>Hotel Amenities</b>
                         <p>Laundry, luggage and maid services, currency exchange, direct access to the Sands Expo Center, concierge, rental-car reservations, golf reservations, safety deposit boxes and wake-up call service.</p>
                     </div>
-                    <a class="showhide">View less Hotel Details</a>
+                    <a class="showmor">View less Hotel Details</a>
 
                 </div>
 
-                <div class="tab-pane" id="2a">
+                <div class="tab-pane" id="description-pane">
+                    <div class="showmore" data-description="Hotel Description">
                     <h2 class="vegas-red">Venetian Description</h2>
                     <p>History has seen great empires literally rise from the dust. Similarly, modern day Las Vegas has been witness to the erection of colossal creations -- like The Venetian.</p>
                     <p>Opened in 1999, this megaresort, where the Sands Hotel of Rat Pack lore once stood, is situated in the center of the Strip. It's inspired by the art and architectural beauty of Venice, Italy's most romantic city. In fact, The Venetian has faithfully re-created such historic landmarks as the Campanile Tower, St. Mark's Square, the Rialto Bridge and Doge's Palace. Arched bridges, piazzas and cobblestone pathways are also incorporated throughout the property.</p>
                     <p> The Venetian is also an eco-friendly property where you will find numerous green initiatives in place -- like LED lighting, solar panels, a reclaimed water system, eco-safe cleaning products, low-flush toilets and much more.</p>
                     <p> Among the activities offered, visitors can stroll inside and outside along canals teeming with authentic <b>gondolas</b> steered by singing gondoliers. <b>Madame Tussauds Las Vegas</b>, a worldwide attraction featuring celebrity wax figures, has a location at the front of the resort.</p>
                     <p> For more serious Broadway-caliber entertainment, head to The Venetian's custom-built Sands Theatre, which features the worldwide smash <b>"Rock of Ages."</b> Plus, a variety of headliners and comedians -- such as David Spade -- regularly appear here. The hotel is also home to <b>"Smokey Robinson Presents Human Nature: The Motown Show"</b> -- featuring a group of talented vocalists from Australia singing Motown tunes.</p>
-                    <a class="showhide">View less Hotel Description</a>
+                    </div>
+                    <a class="showmor">View less Hotel Description</a>
                 </div>
-                <div class="tab-pane" id="3a">
+                <div class="tab-pane" id="map-pane">
                     <h2 class="vegas-red">Venetian</h2>
                     <p>3355 S. Las Vegas Blvd. <br>
                     Las Vegas, NV 89109</p>
@@ -138,14 +159,15 @@
             </div>
         </div>
     </div>
-    <div id="content-fine-print">
+
+    <div id="content-fine-print" class="fine-print">
         <p>*Sample prices shown are for select midweek (Sun-Thu) dates. Offer subject to change. Prices do not include taxes and fees. Based on availability.</p>
         <br>
         <p>*Terms and Conditions of Air + Hotel Packages and Promotions: Advertised air + hotel package prices include all domestic taxes and VEGAS.com-imposed air + hotel package fees. Sample prices shown are updated every Sunday and are per person, based on double occupancy, departing from featured cities on select weekdays between 30 and 52 out. Offers are subject to change. Based on availability. Seats are limited and may not be available on all flights. Some airlines charge baggage fees at airport or online check-in. Some hotels charge additional fees at check-in.</p>
     </div>
-
 </div>
 
+      
 <!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -155,22 +177,11 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js scripts/plugins.js -->
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+
         <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
         <!-- endbuild -->
 
