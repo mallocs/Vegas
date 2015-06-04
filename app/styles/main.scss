@@ -2,26 +2,67 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+//@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss";
+//@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins.scss";
+
+//@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss";
+//@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss";
+//@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss";
+//@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss";
+
 // endbower
+
 
 /*mmi*/
 /*headline color: #990000 */
 /*box background color: #fffdf5 */
 /*tab background color: #ffc033 */
 body {
-  padding: 0;
+  padding: 100px;
   margin: 0;
-  background-color: black;
+  background-color: #000;
 }
 
 #content {
     width: 960px;
     height: 1000px;
     margin: 0 auto;
-    background-color: white;
+    background-color: #fff;
+}
+
+#content h2 {
+    font-size: 16px;
+}
+
+#content-fine-print p {
+    font-size: 8px;
+    margin: 0 5px 15px 5px;
+    clear: both;
+}
+
+#content-offer {
+    height: 115px;
+}
+
+#content-available-hotels {
+    width: 260px;
+    border: 1px solid #ffc033;
+}
+
+#content-left-column {
+    float: left;
+    margin-left: 4px;
+}
+
+#content-right-column {
+    float: right;
+}
+#content-hotel-image {
+   height: 250px; 
 }
 
 #breadcrumbs {
+    padding-left: 10px;
     background-color: #eeeeee;
 }
 
@@ -29,8 +70,22 @@ body {
     float: right;
 }
 
+.vegas-red {
+    color: #990000;
+}
+
+.hotel-details-left {
+   float: left;
+    width: 49%;
+}
+
+.hotel-details-right {
+   float: right;
+    width: 49%;
+}
+
 #vegas-tabs-box {
-    padding-top: 100px;
+    padding: 100px 20px 3px 0;
 }
 
 #vegas-tabs-box .tab-content {
@@ -66,16 +121,12 @@ body {
 }
 
 .vegas-tabs-list li a:link {
-    color: black;
-}
-
-.vegas-tabs-list li a:visited {
-    color: #667;
+    color: #000;
 }
 
 .vegas-tabs-list li.active a,
 .vegas-tabs-list li a:hover {
-    background: white;
+    background: #fff;
     border-bottom: 1px solid white;
 }
 
