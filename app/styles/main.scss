@@ -23,6 +23,10 @@ body {
   background-color: #000;
 }
 
+a {
+    cursor: pointer; /*what's overriding this?*/
+}
+
 #content {
     width: 960px;
     height: 1000px;
@@ -32,6 +36,14 @@ body {
 
 #content h2 {
     font-size: 16px;
+}
+
+#content table {
+    table-layout: fixed;
+}
+
+#content table td {
+    overflow: hidden;
 }
 
 #content-fine-print p {
@@ -45,20 +57,24 @@ body {
 }
 
 #content-available-hotels {
-    width: 260px;
     border: 1px solid #ffc033;
 }
 
 #content-left-column {
+    width: 270px;
     float: left;
+    clear: right;
     margin-left: 4px;
 }
 
 #content-right-column {
     float: right;
+    width: 660px;
 }
+
 #content-hotel-image {
-   height: 250px; 
+    padding: 5px;
+    border: 1px solid #ffc033;
 }
 
 #breadcrumbs {
@@ -68,6 +84,11 @@ body {
 
 #booking-info {
     float: right;
+}
+
+.showhide {
+    float: left;
+    clear: both;
 }
 
 .vegas-red {
@@ -92,7 +113,6 @@ body {
   width: 675px;
   color: black;
   background-color: #fffdf5;
-  padding: 5px 15px;
   border: 1px solid #ffc033;
   border-top: none;
 }
@@ -102,7 +122,7 @@ body {
     padding: 3px 0;
     margin: 0;
     border-bottom: 1px solid #ffc033;
-    font: bold 12px Verdana, sans-serif;
+    font: normal 12px Verdana, sans-serif;
 }
 
 .vegas-tabs-list li {
@@ -124,8 +144,10 @@ body {
     color: #000;
 }
 
-.vegas-tabs-list li.active a,
 .vegas-tabs-list li a:hover {
+    color: gray;
+}
+.vegas-tabs-list li.active a {
     background: #fff;
     border-bottom: 1px solid white;
 }
