@@ -8,9 +8,26 @@
         window.location.hash = MAP_ID;
     });
     
-    var showmoreEl = $('<a>Show more</a>').on('click', function() {
-            alert('hi');
-        });
-    $('.showmore').after( showmoreEl );
+    function makeShowMore(wrapperEl, description) {
+        var moreHtml = '<a>Show more ' + (description || '') + '&nbsp;<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>';
+        var lessHtml = '<a>Show less ' + (description || '') + '&nbsp;<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></a>';
+
+        $(wrapperEl).css({ height: '200px',
+                         overflow: 'hidden'});
+        return showmoreEl = $(moreHtml).on('click', function() {
+            if( $(wrapperEl)[0].style.height === '200px' ) {
+                $(this).html(lessHtml);
+                $(wrapperEl)[0].style.height = '';
+                $(wrapperEl)[0].style.overflow = '';
+            } else {
+                $(this).html(moreHtml);
+                $(wrapperEl)[0].style.height = '200px';
+                $(wrapperEl)[0].style.overflow = 'hidden';
+            }
+        }).css({position: 'relative',
+                bottom: '-10px'});
+    }
+
+    $('.showmore').each( function() {  $(this).after(makeShowMore(this, $(this).data('description'))) } );
     
 })( jQuery );

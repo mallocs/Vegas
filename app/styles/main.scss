@@ -107,7 +107,9 @@ h3 {
 }
 
 #rate-guarantee {
-    margin-top: 10px;
+}
+#rate-guarantee > a {
+    padding-left: 5px;
 }
 
 #content-offer-left {
@@ -209,64 +211,43 @@ h3 {
 }
 
 .vegas-tabs-list li.active a {
-    background: #fff;
+    background: #fffdf5;
     border-bottom: 1px solid white;
 }
-/*mmi*/
 
-/* Space out content a bit */
-
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+/*sprites*/
+.best-rate-img {
+ width: 34px;
+ height: 32px;
+ position: relative;
+ top: 10px;
+ display: inline-block;
+ background: url('../images/sprite.jpg') 0 0;   
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+.star-img {
+ width: 20px;
+ height: 17px;
+ position: relative;
+ top: 5px;
+ display: inline-block;
+ background: url('../images/sprite.jpg') 0 -32px;     
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+.like-img {
+ width: 20px;
+ height: 17px;
+ position: relative;
+ top: 1px;
+ display: inline-block;
+ background: url('../images/sprite.jpg') 0 -49px;     
 }
+/*end mmi*/
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
 
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
 
 }
