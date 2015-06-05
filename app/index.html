@@ -93,20 +93,20 @@
         
 
         <div id="vegas-tabs-box">
-            <ul class="vegas-tabs-list">
+            <ul class="vegas-tabs-list" role="tablist">
                 <li class="active">
-                    <a href="#details-pane" data-toggle="tab">Details</a>
+                    <a href="#details-pane" data-toggle="tab" aria-controls="details" role="tab">Details</a>
                 </li>
                 <li>
-                    <a href="#description-pane" data-toggle="tab">Description</a>
+                    <a href="#description-pane" data-toggle="tab" aria-controls="description" role="tab">Description</a>
                 </li>
                 <li>
-                    <a href="#map-pane" data-toggle="tab">Map</a>
+                    <a href="#map-pane" data-toggle="tab" aria-controls="map" role="tab">Map</a>
                 </li>
             </ul>
 
             <div class="tab-content clearfix">
-                <div class="tab-pane active" id="details-pane">
+                <div class="tab-pane active" id="details-pane" role="tabpanel">
                     <div class="showmore" data-description="Hotel Details">
                         <h2 class="vegas-red">Venetian Details</h2>
                         <div class="hotel-details-left">
@@ -139,7 +139,7 @@
                     </div>
                 </div>
 
-                <div class="tab-pane" id="description-pane">
+                <div class="tab-pane" id="description-pane" role="tabpanel">
                     <div class="showmore" data-description="Hotel Description">
                         <h2 class="vegas-red">Venetian Description</h2>
                         <p>History has seen great empires literally rise from the dust. Similarly, modern day Las Vegas has been witness to the erection of colossal creations -- like The Venetian.</p>
@@ -149,7 +149,7 @@
                         <p> For more serious Broadway-caliber entertainment, head to The Venetian's custom-built Sands Theatre, which features the worldwide smash <b>"Rock of Ages."</b> Plus, a variety of headliners and comedians -- such as David Spade -- regularly appear here. The hotel is also home to <b>"Smokey Robinson Presents Human Nature: The Motown Show"</b> -- featuring a group of talented vocalists from Australia singing Motown tunes.</p>
                     </div>
                 </div>
-                <div class="tab-pane" id="map-pane">
+                <div class="tab-pane" id="map-pane" role="tabpanel">
                     <h2 class="vegas-red">Venetian</h2>
                     <p>3355 S. Las Vegas Blvd. <br>
                     Las Vegas, NV 89109</p>
