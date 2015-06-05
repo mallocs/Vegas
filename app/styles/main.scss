@@ -1,31 +1,28 @@
 $icon-font-path: '../fonts/';
-
 // bower:scss
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 //@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss";
 //@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins.scss";
-
 //@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss";
 //@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss";
 //@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss";
 //@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss";
-
 // endbower
-
-
 /*mmi*/
-/*headline color: #990000 */
-/*box background color: #fffdf5 */
-/*tab background color: #ffc033 */
+
+$vegas-red-color: #990000;
+$box-background-color: #fffdf5;
+$tab-background-color: #ffc033;
 body {
-  margin: 0;
-  background-color: #000;
-  font-size: 14px;
-  line-height: initial;
+    margin: 0;
+    background-color: #000;
+    font-size: 14px;
+    line-height: initial;
 }
 
 a {
-    cursor: pointer; /*what's overriding this?*/
+    cursor: pointer;
+    /*what's overriding this?*/
 }
 
 h1 {
@@ -34,7 +31,7 @@ h1 {
 }
 
 h2 {
-    margin: 0 0 5px 0;   
+    margin: 0 0 5px 0;
     padding: 0;
 }
 
@@ -55,7 +52,7 @@ h3 {
 }
 
 .vegas-red {
-    color: #990000;
+    color: $vegas-red-color;
 }
 
 .fine-print {
@@ -68,7 +65,7 @@ h3 {
 }
 
 #content-available-hotels {
-    border: 1px solid #ffc033;
+    border: 1px solid $tab-background-color;
 }
 
 #available-hotels-table {
@@ -97,7 +94,7 @@ h3 {
 
 #content-hotel-image {
     padding: 5px;
-    border: 1px solid #ffc033;
+    border: 1px solid $tab-background-color;
 }
 
 #breadcrumbs {
@@ -110,8 +107,8 @@ h3 {
     margin-right: 15px;
 }
 
-#rate-guarantee {
-}
+#rate-guarantee {}
+
 #rate-guarantee > a {
     padding-left: 5px;
 }
@@ -120,8 +117,7 @@ h3 {
     margin-bottom: 20px;
 }
 
-#content-offer {
-}
+#content-offer {}
 
 #content-offer-right {
     float: right;
@@ -157,12 +153,12 @@ h3 {
 }
 
 .hotel-details-left {
-   float: left;
+    float: left;
     width: 49%;
 }
 
 .hotel-details-right {
-   float: right;
+    float: right;
     width: 49%;
 }
 
@@ -171,19 +167,19 @@ h3 {
 }
 
 #vegas-tabs-box .tab-content {
-  width: 660px;
-  padding: 10px 10px 20px 10px;
-  color: #000;
-  background-color: #fffdf5;
-  border: 1px solid #ffc033;
-  border-top: none;
+    width: 660px;
+    padding: 10px 10px 20px 10px;
+    color: #000;
+    background-color: $box-background-color;
+    border: 1px solid $tab-background-color;
+    border-top: none;
 }
 
 .vegas-tabs-list {
     width: 660px;
     padding: 9px 0;
     margin: 0;
-    border-bottom: 1px solid #ffc033;
+    border-bottom: 1px solid $tab-background-color;
     font: bold 12px Arial, sans-serif;
 }
 
@@ -195,9 +191,9 @@ h3 {
 
 .vegas-tabs-list li a {
     padding: 9px 15px;
-    border: 1px solid #ffc033;
+    border: 1px solid $tab-background-color;
     border-bottom: none;
-    background: #ffc033;
+    background: $tab-background-color;
     text-decoration: none;
     border-radius: 4px 4px 0 0;
 }
@@ -211,43 +207,38 @@ h3 {
 }
 
 .vegas-tabs-list li.active a {
-    background: #fffdf5;
-    border-bottom: 1px solid white;
+    background: $box-background-color;
+    border-bottom: 1px solid #fff;
 }
+/***sprites***/
 
-/*sprites*/
 .best-rate-img {
- width: 34px;
- height: 32px;
- position: relative;
- top: 10px;
- display: inline-block;
- background: url('../images/sprite.jpg') 0 0;   
+    width: 34px;
+    height: 32px;
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    background: url('../images/sprite.jpg') 0 0;
 }
 
 .star-img {
- width: 20px;
- height: 17px;
- position: relative;
- top: 5px;
- display: inline-block;
- background: url('../images/sprite.jpg') 0 -32px;     
+    width: 20px;
+    height: 17px;
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    background: url('../images/sprite.jpg') 0 -32px;
 }
 
 .like-img {
- width: 20px;
- height: 17px;
- position: relative;
- top: 1px;
- display: inline-block;
- background: url('../images/sprite.jpg') 0 -49px;     
+    width: 20px;
+    height: 17px;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    background: url('../images/sprite.jpg') 0 -49px;
 }
 /*end mmi*/
-
-
-
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
 
-
-}
+@media screen and (min-width: 768px) {}
