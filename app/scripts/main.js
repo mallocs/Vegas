@@ -1,4 +1,5 @@
 /* jshint devel:true */
+'use strict';
 
 (function ( $ ) {
     var MAP_ID = '#map-pane';
@@ -12,9 +13,8 @@
         var moreHtml = '<a>Show more ' + (description || '') + '&nbsp;<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>';
         var lessHtml = '<a>Show less ' + (description || '') + '&nbsp;<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></a>';
 
-        $(wrapperEl).css({ height: '200px',
-                         overflow: 'hidden'});
-        return showmoreEl = $(moreHtml).on('click', function() {
+        $(wrapperEl).css({ height: '200px', overflow: 'hidden'});
+        return $(moreHtml).on('click', function() {
             if( $(wrapperEl)[0].style.height === '200px' ) {
                 $(this).html(lessHtml);
                 $(wrapperEl)[0].style.height = '';
@@ -28,6 +28,8 @@
                 bottom: '-10px'});
     }
 
-    $('.showmore').each( function() {  $(this).after(makeShowMore(this, $(this).data('description'))) } );
+    $('.showmore').each( function() {  
+        $(this).after(makeShowMore(this, $(this).data('description'))); 
+    });
     
 })( jQuery );

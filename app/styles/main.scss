@@ -54,14 +54,8 @@ h3 {
     font-size: 16px;
 }
 
-#available-hotels-table {
-    table-layout: fixed;
-    width: 100%;
-    margin-left: 4px;
-}
-
-#content table td {
-    overflow: hidden;
+.vegas-red {
+    color: #990000;
 }
 
 .fine-print {
@@ -75,6 +69,16 @@ h3 {
 
 #content-available-hotels {
     border: 1px solid #ffc033;
+}
+
+#available-hotels-table {
+    table-layout: fixed;
+    width: 100%;
+    margin-left: 4px;
+}
+
+#content table td {
+    overflow: hidden;
 }
 
 #content-left-column {
@@ -150,10 +154,6 @@ h3 {
 .showmore {
     float: left;
     clear: both;
-}
-
-.vegas-red {
-    color: #990000;
 }
 
 .hotel-details-left {
