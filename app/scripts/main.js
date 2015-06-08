@@ -22,8 +22,8 @@
     //This makes the show/hide element and inits the wrapper in the hidden state.
     function makeShowMore(wrapperEl, description) {
         description = (typeof description === 'string') ? description : '';
-        var moreHtml = '<a>Show more ' + description + '&nbsp;<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>';
-        var lessHtml = '<a>Show less ' + description + '&nbsp;<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></a>';
+        var moreHtml = '<a>Show more ' + description + '&nbsp;<span class="icon-down-triangle" aria-hidden="true">&#x25BE;</span></a>';
+        var lessHtml = '<a>Show less ' + description + '&nbsp;<span class="icon-up-triangle" aria-hidden="true">&#x25B4;</span></a>';
 
         $(wrapperEl).css({ height: '200px', overflow: 'hidden'});
         return $(moreHtml).on('click', function() {

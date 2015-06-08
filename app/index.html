@@ -1,21 +1,24 @@
 <!doctype html>
-<html class="no-js" lang="">
-  <head>
+<html class="no-js">
+  <head lang="en">
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vegas page</title>
+
+      
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-
+      
     <!-- build:css styles/main.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-
 
   </head>
   <body>
@@ -95,13 +98,13 @@
         <div id="vegas-tabs-box">
             <ul class="vegas-tabs-list" role="tablist">
                 <li class="active">
-                    <a href="#details-pane" data-toggle="tab" aria-controls="details" role="tab">Details</a>
+                    <a href="#details-pane" data-toggle="tab" aria-controls="details" role="tab" tabindex=1>Details</a>
                 </li>
                 <li>
-                    <a href="#description-pane" data-toggle="tab" aria-controls="description" role="tab">Description</a>
+                    <a href="#description-pane" data-toggle="tab" aria-controls="description" role="tab" tabindex=2>Description</a>
                 </li>
                 <li>
-                    <a href="#map-pane" data-toggle="tab" aria-controls="map" role="tab">Map</a>
+                    <a href="#map-pane" data-toggle="tab" aria-controls="map" role="tab" tabindex=3>Map</a>
                 </li>
             </ul>
 

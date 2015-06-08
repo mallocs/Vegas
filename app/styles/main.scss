@@ -22,7 +22,6 @@ body {
 
 a {
     cursor: pointer;
-    /*what's overriding this?*/
 }
 
 h1 {
@@ -209,6 +208,20 @@ h3 {
 .vegas-tabs-list li.active a {
     background: $box-background-color;
     border-bottom: 1px solid #fff;
+}
+
+.icon-up-triangle {
+    font-size: 32px;
+    position: relative;
+    top: 4px;
+}
+.icon-down-triangle {
+    font-size: 20px;
+}
+a:hover .icon-up-triangle,
+a:hover .icon-down-triangle {
+    text-decoration: none;
+    display: inline-block;
 }
 /***sprites***/
 

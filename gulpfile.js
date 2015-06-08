@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var critical = require('critical');
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
@@ -100,6 +101,16 @@ gulp.task('serve', ['styles', 'fonts'], function () {
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
+
+
+gulp.task('serve:dist', function () {
+  $.connect.server({
+    root: 'dist',
+    port: 9001
+  });
+});
+
+
 // inject bower components
 gulp.task('wiredep', function () {
   var wiredep = require('wiredep').stream;
@@ -118,9 +129,32 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
+//for critical
+gulp.task('copystyles', function () {
+    return gulp.src(['dist/styles/main.css'])
+        .pipe($.rename({
+            basename: "site" // site.css
+        }))
+        .pipe(gulp.dest('dist/styles'));
+});
+
+gulp.task('critical', ['build', 'copystyles'], function () {
+    critical.generateInline({
+        base: 'dist/',
+        src: 'inline.html',
+        styleTarget: 'styles/inline-main.css',
+        htmlTarget: 'inline.html',
+        width: 320,
+        height: 480,
+        inlineImages: true,
+        minify: true
+    });
+});
+
 gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
+
 
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
