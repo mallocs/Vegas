@@ -17,7 +17,7 @@ gulp.task('styles', function () {
       onError: console.error.bind(console, 'Sass error:')
     }))
     .pipe($.postcss([
-      require('autoprefixer-core')({browsers: ['last 1 version']})
+      require('autoprefixer-core')({browsers: ['last 2 versions', 'ie 8', 'ie 9']})
     ]))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))

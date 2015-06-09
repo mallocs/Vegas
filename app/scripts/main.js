@@ -26,7 +26,6 @@
         var moreHtml = '<a>Show more ' + description + '&nbsp;<span class="icon-down-triangle" aria-hidden="true">&#x25BE;</span></a>';
         var lessHtml = '<a>Show less ' + description + '&nbsp;<span class="icon-up-triangle" aria-hidden="true">&#x25B4;</span></a>';
 
-   //     $(wrapperEl).css({ height: '200px', overflow: 'hidden'});
         return $(moreHtml).on('click', function() {
             if ($(wrapperEl).hasClass(HIDECLASS)) {
                 $(this).html(lessHtml);
@@ -35,17 +34,7 @@
                 $(this).html(moreHtml);
                 $(wrapperEl).addClass(HIDECLASS);
             }
-    /*
-            if( $(wrapperEl)[0].style.height === '200px' ) {
-                $(this).html(lessHtml);
-                $(wrapperEl)[0].style.height = '';
-                $(wrapperEl)[0].style.overflow = '';
-            } else {
-                $(this).html(moreHtml);
-                $(wrapperEl)[0].style.height = '200px';
-                $(wrapperEl)[0].style.overflow = 'hidden';
-            }
-    */
+
         }).css({position: 'relative',
                 bottom: '-10px'});
     }
