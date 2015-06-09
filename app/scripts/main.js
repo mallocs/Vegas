@@ -3,6 +3,7 @@
 
 (function ( $ ) {
     var MAP_ID = '#map-pane';
+    var HIDECLASS = 'showmorehidden';
 
     //This makes any element with class "link-to-map" open and move to the MAP_ID panel on click events
     $('.link-to-map').on('click', function() {
@@ -25,8 +26,16 @@
         var moreHtml = '<a>Show more ' + description + '&nbsp;<span class="icon-down-triangle" aria-hidden="true">&#x25BE;</span></a>';
         var lessHtml = '<a>Show less ' + description + '&nbsp;<span class="icon-up-triangle" aria-hidden="true">&#x25B4;</span></a>';
 
-        $(wrapperEl).css({ height: '200px', overflow: 'hidden'});
+   //     $(wrapperEl).css({ height: '200px', overflow: 'hidden'});
         return $(moreHtml).on('click', function() {
+            if ($(wrapperEl).hasClass(HIDECLASS)) {
+                $(this).html(lessHtml);
+                $(wrapperEl).removeClass(HIDECLASS);
+            } else {
+                $(this).html(moreHtml);
+                $(wrapperEl).addClass(HIDECLASS);
+            }
+    /*
             if( $(wrapperEl)[0].style.height === '200px' ) {
                 $(this).html(lessHtml);
                 $(wrapperEl)[0].style.height = '';
@@ -36,6 +45,7 @@
                 $(wrapperEl)[0].style.height = '200px';
                 $(wrapperEl)[0].style.overflow = 'hidden';
             }
+    */
         }).css({position: 'relative',
                 bottom: '-10px'});
     }

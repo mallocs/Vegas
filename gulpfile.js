@@ -102,7 +102,6 @@ gulp.task('serve', ['styles', 'fonts'], function () {
 });
 
 
-
 gulp.task('serve:dist', function () {
   $.connect.server({
     root: 'dist',
